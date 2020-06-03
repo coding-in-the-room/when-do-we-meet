@@ -1,0 +1,12 @@
+spring:
+  application:
+    name:
+  datasource:
+    driver-class-name:
+    url:
+    username:
+    password:
+    maxIdle:
+    maxActive:
+    maxWait:
+    validation-query:
