@@ -15,8 +15,8 @@
 ### 기술 스택
 
 - Client : React (TypeScript)
-- Server : Java Spring, MySQL
-- Infra : nginx (redirect)
+- Server : Java Spring, MySQL, JPA, Hibernate
+- Infra : nCloud, nginx
 
 
 
@@ -27,6 +27,7 @@
 - Rest API 구현
 - Database 연동
 - Gradle 이용
+- JPA, Hibernate 및 Lombok 이용
 
 
 
