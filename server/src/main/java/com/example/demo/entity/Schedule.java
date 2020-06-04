@@ -1,11 +1,14 @@
 package com.example.demo.entity;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@NoArgsConstructor
 @Table(name="schedule")
 public class Schedule {
 
@@ -32,11 +35,11 @@ public class Schedule {
   @Temporal(TemporalType.TIMESTAMP)
   private Date deadline;
 
-  @Column(name = "userId")
+  @Column(name = "userId", insertable = false, updatable = false)
   private long userId;
 
   @ManyToOne
-  @JoinColumn(name = "userId", insertable = false, updatable = false)
+  @JoinColumn(name = "userId")
   private User user;
 
   @OneToMany(mappedBy = "schedule")

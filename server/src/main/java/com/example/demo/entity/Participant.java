@@ -1,33 +1,36 @@
 package com.example.demo.entity;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@NoArgsConstructor
 @Table(name="participant")
 public class Participant {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "Id")
   private long Id;
 
-  @Column(name = "name")
+  @Column(name = "name", nullable = false)
   private String name;
 
-  @Column(name = "startAt")
+  @Column(name = "startAt", nullable = false)
   @Temporal(TemporalType.TIMESTAMP)
   private Date startAt;
 
-  @Column(name = "endAt")
+  @Column(name = "endAt", nullable = false)
   @Temporal(TemporalType.TIMESTAMP)
   private Date endAt;
 
-  @Column(name = "scheduleId")
+  @Column(name = "scheduleId", insertable = false, updatable = false)
   private long scheduleId;
 
   @ManyToOne
-  @JoinColumn(name = "scheduleId", insertable = false, updatable = false)
+  @JoinColumn(name = "scheduleId")
   private Schedule schedule;
 
   @Override

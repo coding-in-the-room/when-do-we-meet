@@ -1,10 +1,13 @@
 package com.example.demo.entity;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NoArgsConstructor
 @Table(name="user")
 public class User {
 
@@ -21,8 +24,6 @@ public class User {
 
   @OneToMany(mappedBy = "user")
   private List<Schedule> schedules = new ArrayList<>();
-
-  public User(){}
 
   public User(String name, String password){
     this.name = name;
