@@ -1,17 +1,16 @@
-import MenuIcon from "@material-ui/icons/Menu";
 import AppBar, { AppBarProps } from "@material-ui/core/AppBar";
 import styled, { ThemedStyledProps } from "styled-components/macro";
 
-import { BREAKPOINT } from "../../constant";
+import { BREAKPOINT, THEME } from "../../constant";
 
 interface HeaderProps extends ThemedStyledProps<AppBarProps, any> {
   background?: string;
   children: React.ReactNode;
 }
 
-export const Header = styled(AppBar)<HeaderProps>`
+export const Header = styled(AppBar)`
   && {
-    background-color: ${(props) => props.background};
+    background-color: white;
     color: white;
     position: fixed;
     z-index: 2;
@@ -19,11 +18,12 @@ export const Header = styled(AppBar)<HeaderProps>`
     display: block;
     flex-direction: unset;
     flex-shrink: unset;
+    border-bottom: 1px solid ${THEME.GRAY};
   }
 `;
 
 export const HeaderContainer = styled.div`
-  height: 6.4rem;
+  height: 5.6rem;
 
   position: relative;
   padding: 0 2rem;
@@ -36,4 +36,23 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const HamburgerIcon = styled(MenuIcon)``;
+export const MobileContainer = styled.div`
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (min-width: ${BREAKPOINT}px) {
+    display: none;
+  }
+`;
+
+export const DesktopContainer = styled.div`
+  display: none;
+  width: 100%;
+
+  @media only screen and (min-width: ${BREAKPOINT}px) {
+    display: flex;
+  }
+`;
