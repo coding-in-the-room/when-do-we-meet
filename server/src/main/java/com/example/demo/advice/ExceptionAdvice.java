@@ -12,6 +12,6 @@ public class ExceptionAdvice {
 
   @ExceptionHandler
   public ResponseEntity<ErrorResponse> handleException(NotFoundException ex){
-    return new ResponseEntity<>(new ErrorResponse(ex.getMessage()), HttpStatus.NOT_FOUND);
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorResponse(ex.getMessage()));
   }
 }

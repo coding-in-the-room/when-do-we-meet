@@ -1,5 +1,8 @@
 package com.example.demo.dto;
 
+import lombok.Getter;
+
+@Getter
 public class ErrorResponse {
   private String message;
   private long timeStamp;
