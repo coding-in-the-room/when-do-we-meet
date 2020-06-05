@@ -18,18 +18,14 @@ public class UserController {
   private UserService userService;
 
   @GetMapping()
-  public UsersResponse getAllUsers(){
-     List<User> users = userService.getAllUsers();
-     return new UsersResponse(users);
+  public UsersResponse getAllUsers() {
+    List<User> users = userService.getAllUsers();
+    return new UsersResponse(users);
   }
 
   @GetMapping("/{id}")
   public UserResponse getUserById(@PathVariable("id") long id) throws NotFoundException {
-    try {
-      User user = userService.getUserById(id);
-      return new UserResponse(user);
-    } catch (NotFoundException e){
-      throw new NotFoundException("이거 JSON으로 어캐 바꾸징ㅎㅎ");
-    }
+    User user = userService.getUserById(id);
+    return new UserResponse(user);
   }
 }
