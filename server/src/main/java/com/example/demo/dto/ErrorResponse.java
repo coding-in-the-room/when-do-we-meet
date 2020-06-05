@@ -11,4 +11,8 @@ public class ErrorResponse {
     this.message = message;
     this.timeStamp = System.currentTimeMillis();
   }
+
+  public static ErrorResponse fromMessage(String message){
+    return new ErrorResponse(message);
+  }
 }
