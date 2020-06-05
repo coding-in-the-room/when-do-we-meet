@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing : border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif;
   }
   html {
     font-size : 10px;
