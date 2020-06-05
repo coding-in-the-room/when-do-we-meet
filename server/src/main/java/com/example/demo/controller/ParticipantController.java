@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("participant")
 public class ParticipantController {
 
-  @Autowired
   private ParticipantService participantService;
 
+  public ParticipantController(ParticipantService participantService) {
+    this.participantService = participantService;
+  }
+
   @GetMapping()
-  public String getParticipant(){
+  public String getParticipant() {
     return "Participant";
   }
 }
