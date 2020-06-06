@@ -169,3 +169,6 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/java,gradle,intellij
 application.properties
+
+### 인증정보 제외
+/src/main/resources/google.yml
