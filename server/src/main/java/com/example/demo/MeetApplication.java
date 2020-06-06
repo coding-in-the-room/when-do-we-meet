@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MeetApplication {
 
+	private static final String GOOGLE_OAUTH_PROPERTIES = "spring.config.location=classpath:/google.yml";
+
 	public static void main(String[] args) {
 		SpringApplication.run(MeetApplication.class, args);
 	}
