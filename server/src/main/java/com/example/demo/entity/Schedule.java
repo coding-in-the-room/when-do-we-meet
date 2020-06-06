@@ -13,25 +13,25 @@ import java.util.List;
 public class Schedule {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "Id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "Id", nullable = false, unique = true)
   private long Id;
 
-  @Column(name = "name")
+  @Column(name = "name", nullable = false)
   private String name;
 
   @Column(columnDefinition = "TEXT", name = "description")
   private String description;
 
-  @Column(name = "startAt")
+  @Column(name = "startAt", nullable = false)
   @Temporal(TemporalType.TIMESTAMP)
   private Date startAt;
 
-  @Column(name = "endAt")
+  @Column(name = "endAt", nullable = false)
   @Temporal(TemporalType.TIMESTAMP)
   private Date endAt;
 
-  @Column(name = "deadline")
+  @Column(name = "deadline", nullable = false)
   @Temporal(TemporalType.TIMESTAMP)
   private Date deadline;
 
