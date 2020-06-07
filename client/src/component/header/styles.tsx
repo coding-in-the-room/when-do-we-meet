@@ -102,16 +102,31 @@ export const SignInButton = styled.button`
   width: 42rem;
   height: 4.6rem;
   border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 
   border: none;
   outline: none;
+
+  background-color: ${THEME.PRIMARY};
+  color: white;
 `;
 
-export const SignInWithGoogleButton = styled.button`
+export const SignInWithGoogleButton = styled.a`
   width: 42rem;
   height: 4.6rem;
   border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 
   border: none;
   outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${THEME.PRIMARY};
+  color: white;
+  cursor: pointer;
 `;

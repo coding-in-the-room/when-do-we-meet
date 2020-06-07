@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import * as S from "./styles";
 import Button from "../button";
 import Modal from "../modal";
+
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
@@ -29,7 +30,9 @@ const Header: React.FC<HeaderProps> = () => {
           <S.ModalContentContainer>
             <S.SignInButtonContainer>
               <S.SignInButton>Sign in</S.SignInButton>
-              <S.SignInWithGoogleButton>
+              <S.SignInWithGoogleButton
+                href={process.env.REACT_APP_GOOGLE_OAUTH_PATH}
+              >
                 Sign in with google
               </S.SignInWithGoogleButton>
             </S.SignInButtonContainer>
