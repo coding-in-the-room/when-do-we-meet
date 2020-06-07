@@ -10,9 +10,13 @@ const Header: React.FC<HeaderProps> = () => {
     <S.Header>
       <S.HeaderContainer>
         <S.MobileContainer>
+          <S.Logo>로고</S.Logo>
           <Button>Sign up</Button>
         </S.MobileContainer>
-        <S.DesktopContainer></S.DesktopContainer>
+        <S.DesktopContainer>
+          <S.Logo>로고</S.Logo>
+          <Button>Sign up</Button>
+        </S.DesktopContainer>
       </S.HeaderContainer>
     </S.Header>
   );

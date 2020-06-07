@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   backgroundColor = "white",
 }) => {
   return (
-    <S.Button disableRipple={true}>
+    <S.Button backgroundColor={backgroundColor} disableRipple={true}>
       <S.ButtonContainer>{children}</S.ButtonContainer>
     </S.Button>
   );

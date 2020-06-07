@@ -1,11 +1,14 @@
 import MaterialButton from "@material-ui/core/Button";
 import styled from "styled-components/macro";
 
-interface ButtonContainerProps {}
+interface ButtonContainerProps {
+  backgroundColor?: string;
+}
 
-export const Button = styled(MaterialButton)`
+export const Button = styled(MaterialButton)<ButtonContainerProps>`
   && {
     text-transform: none;
+    background-color: ${(props) => props.backgroundColor};
   }
 `;
 

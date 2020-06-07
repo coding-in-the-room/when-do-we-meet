@@ -54,5 +54,16 @@ export const DesktopContainer = styled.div`
 
   @media only screen and (min-width: ${BREAKPOINT}px) {
     display: flex;
+    justify-content: space-between;
   }
+`;
+
+export const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  color: black;
+`;
+
+export const DesktopButtonsContainer = styled.div`
+  display: flex;
 `;
