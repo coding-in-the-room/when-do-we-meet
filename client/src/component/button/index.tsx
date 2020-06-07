@@ -6,15 +6,21 @@ interface ButtonProps {
   children?: React.ReactNode;
   border?: boolean;
   backgroundColor?: string;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
   border = true,
   backgroundColor = "white",
+  onClick,
 }) => {
   return (
-    <S.Button backgroundColor={backgroundColor} disableRipple={true}>
+    <S.Button
+      onClick={onClick}
+      backgroundcolor={backgroundColor}
+      disableRipple={true}
+    >
       <S.ButtonContainer>{children}</S.ButtonContainer>
     </S.Button>
   );
