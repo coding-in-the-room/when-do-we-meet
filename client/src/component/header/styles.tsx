@@ -67,3 +67,51 @@ export const Logo = styled.div`
 export const DesktopButtonsContainer = styled.div`
   display: flex;
 `;
+
+export const ModalContent = styled.div`
+  display: flex;
+
+  @media only screen and (min-width: ${BREAKPOINT}px) {
+    width: 47rem;
+    height: 43rem;
+  }
+`;
+
+export const ModalContentContainer = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+
+  @media only screen and (min-width: ${BREAKPOINT}px) {
+    border-radius: 1.4rem;
+    padding: 2.4rem;
+  }
+`;
+
+export const SignInButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  justify-content: space-between;
+`;
+
+export const SignInButton = styled.button`
+  width: 42rem;
+  height: 4.6rem;
+  border-radius: 1rem;
+
+  border: none;
+  outline: none;
+`;
+
+export const SignInWithGoogleButton = styled.button`
+  width: 42rem;
+  height: 4.6rem;
+  border-radius: 1rem;
+
+  border: none;
+  outline: none;
+`;
