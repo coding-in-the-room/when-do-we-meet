@@ -1,5 +1,6 @@
 import AppBar, { AppBarProps } from "@material-ui/core/AppBar";
 import styled, { ThemedStyledProps } from "styled-components/macro";
+import Button from "@material-ui/core/Button";
 
 import { BREAKPOINT, THEME } from "../../constant";
 
@@ -61,7 +62,18 @@ export const DesktopContainer = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  color: black;
+`;
+
+export const LogoImage = styled.img`
+  width: 30%;
+`;
+
+export const HeaderButton = styled(Button)`
+  && {
+    /* background: linear-gradient(45deg, #ba78f3 00%, #f36d72 50%, #e9b677 100%); */
+    border: 1px solid ${THEME.PRIMARY};
+    color: ${THEME.PRIMARY};
+  }
 `;
 
 export const DesktopButtonsContainer = styled.div`
@@ -70,7 +82,6 @@ export const DesktopButtonsContainer = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-
   @media only screen and (min-width: ${BREAKPOINT}px) {
     width: 47rem;
     height: 43rem;
@@ -84,11 +95,8 @@ export const ModalContentContainer = styled.div`
   align-items: center;
   width: 100%;
   background-color: white;
-
-  @media only screen and (min-width: ${BREAKPOINT}px) {
-    border-radius: 1.4rem;
-    padding: 2.4rem;
-  }
+  border-radius: 1.4rem;
+  padding: 2.4rem;
 `;
 
 export const SignInButtonContainer = styled.div`
@@ -98,35 +106,53 @@ export const SignInButtonContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const SignInButton = styled.button`
-  width: 42rem;
-  height: 4.6rem;
-  border-radius: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+export const SignInButton = styled(Button)`
+  && {
+    background: linear-gradient(45deg, #ba78f3 00%, #f36d72 50%, #e9b677 100%);
+    color: white;
 
-  border: none;
-  outline: none;
+    width: 42rem;
+    height: 4.6rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 
-  background-color: ${THEME.PRIMARY};
-  color: white;
+    border: none;
+    outline: none;
+
+    box-shadow: ${THEME.GRAY} 1px 1px 3px;
+  }
 `;
 
-export const SignInWithGoogleButton = styled.a`
-  width: 42rem;
-  height: 4.6rem;
-  border-radius: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+export const SignInWithGoogleButton = styled(Button)`
+  && {
+    background: white;
 
-  border: none;
-  outline: none;
+    width: 42rem;
+    height: 4.6rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 
+    border: none;
+    outline: none;
+
+    border: 1px solid ${THEME.PRIMARY};
+    box-shadow: ${THEME.GRAY} 1px 1px 3px;
+  }
+`;
+
+export const MiniLogoContainer = styled.span`
+  position: absolute;
+  left: 2rem;
+  /* border-radius: 50%; */
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+`;
 
-  background-color: ${THEME.PRIMARY};
-  color: white;
-  cursor: pointer;
+export const MiniLogo = styled.img`
+  width: 80%;
 `;
