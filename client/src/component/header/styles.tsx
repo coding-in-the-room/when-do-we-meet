@@ -65,7 +65,7 @@ export const Logo = styled.div`
 `;
 
 export const LogoImage = styled.img`
-  width: 30%;
+  width: 25%;
 `;
 
 export const HeaderButton = styled(Button)`
