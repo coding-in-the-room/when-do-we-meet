@@ -108,7 +108,7 @@ export const SignInButtonContainer = styled.div`
 
 export const SignInButton = styled(Button)`
   && {
-    background: linear-gradient(45deg, #ba78f3 00%, #f36d72 50%, #e9b677 100%);
+    background: linear-gradient(45deg, ${THEME.PRIMARY} 00%, ${THEME.SECONDARY} 50%, ${THEME.TERTIARY} 100%);
     color: white;
 
     width: 42rem;
