@@ -17,12 +17,16 @@ const Header: React.FC<HeaderProps> = () => {
     <S.Header>
       <S.HeaderContainer>
         <S.MobileContainer>
-          <S.Logo>로고</S.Logo>
-          <Button onClick={toggleModal}>Sign up</Button>
+          <S.Logo>
+            <S.LogoImage src={process.env.PUBLIC_URL + "logo192.png"} />
+          </S.Logo>
+          <S.HeaderButton onClick={toggleModal}>Sign up</S.HeaderButton>
         </S.MobileContainer>
         <S.DesktopContainer>
-          <S.Logo>로고</S.Logo>
-          <Button onClick={toggleModal}>Sign up</Button>
+          <S.Logo>
+            <S.LogoImage src={process.env.PUBLIC_URL + "logo192.png"} />
+          </S.Logo>
+          <S.HeaderButton onClick={toggleModal}>Sign up</S.HeaderButton>
         </S.DesktopContainer>
       </S.HeaderContainer>
       <Modal open={isModalOpened} onClose={toggleModal}>
@@ -30,9 +34,10 @@ const Header: React.FC<HeaderProps> = () => {
           <S.ModalContentContainer>
             <S.SignInButtonContainer>
               <S.SignInButton>Sign in</S.SignInButton>
-              <S.SignInWithGoogleButton
-                href={process.env.REACT_APP_GOOGLE_OAUTH_PATH}
-              >
+              <S.SignInWithGoogleButton href={process.env.REACT_APP_GOOGLE_OAUTH_PATH}>
+                <S.MiniLogoContainer>
+                  <S.MiniLogo src={process.env.PUBLIC_URL + "/assets/google_logo.png"} />
+                </S.MiniLogoContainer>
                 Sign in with google
               </S.SignInWithGoogleButton>
             </S.SignInButtonContainer>
