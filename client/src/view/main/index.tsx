@@ -4,10 +4,10 @@ import Typist from "react-typist";
 
 interface MainProps {}
 
-const ComponentStarter: React.FC<MainProps> = () => {
+const Main: React.FC<MainProps> = () => {
   return (
-    <S.FlexBoxContainer>
-      <S.FlexBox>
+    <S.Main>
+      <S.MainContainer>
         <S.Catchphrase>
           <Typist cursor={{ hideWhenDone: true }}>
             Super easy
@@ -17,15 +17,15 @@ const ComponentStarter: React.FC<MainProps> = () => {
             meeting time!
           </Typist>
         </S.Catchphrase>
-        <S.Text>
+        <S.SubTitle>
           Generate votes for your group and Mark available time,
           <br />
           and we will show when is the most appropriate.
-        </S.Text>
+        </S.SubTitle>
         <S.TryButton>Try now!</S.TryButton>
-      </S.FlexBox>
-    </S.FlexBoxContainer>
+      </S.MainContainer>
+    </S.Main>
   );
 };
 
-export default ComponentStarter;
+export default Main;

@@ -70,7 +70,6 @@ export const LogoImage = styled.img`
 
 export const HeaderButton = styled(Button)`
   && {
-    /* background: linear-gradient(45deg, #ba78f3 00%, #f36d72 50%, #e9b677 100%); */
     border: 1px solid ${THEME.PRIMARY};
     color: ${THEME.PRIMARY};
   }

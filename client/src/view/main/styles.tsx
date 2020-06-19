@@ -9,16 +9,16 @@ export const Catchphrase = styled.div`
   margin-top: 7rem;
 `;
 
-export const Text = styled.div`
+export const SubTitle = styled.div`
   font-size: 2rem;
   color: ${THEME.DARKGRAY};
 `;
 
-export const FlexBoxContainer = styled.div`
+export const Main = styled.div`
   display: flex;
 `;
 
-export const FlexBox = styled.div`
+export const MainContainer = styled.div`
   padding: 5rem;
   text-align: center;
   justify-content: center;
@@ -43,5 +43,3 @@ export const TryButton = styled(Button)`
     box-shadow: ${THEME.GRAY} 1px 1px 3px;
   }
 `;
-
-export const ComponentContainer = styled.div``;
