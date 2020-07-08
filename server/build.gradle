@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.when.do.we'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '8'
 
 repositories {
 	mavenCentral()
@@ -27,6 +27,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok:1.18.12'
 	testCompileOnly 'org.projectlombok:lombok:1.18.12'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+	testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
+	testCompile group: 'junit', name: 'junit', version: '4.12'
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

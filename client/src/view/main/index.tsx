@@ -9,13 +9,13 @@ const Main: React.FC<MainProps> = () => {
     <S.Main>
       <S.MainContainer>
         <S.Catchphrase>
-          <Typist cursor={{ hideWhenDone: true }}>
+          <S.CustomTypist cursor={{ hideWhenDone: true }}>
             Super easy
             <br />
             decision maker for
             <br />
             meeting time!
-          </Typist>
+          </S.CustomTypist>
         </S.Catchphrase>
         <S.SubTitle>
           Generate votes for your group and Mark available time,

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: meet
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.10.53.228/meet?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: tester
+    password: 1q2w3e!Q@W#E
+    maxIdle: 20
+    maxActive: 400
+    maxWait: 10000
+    validation-query: SELECT 1
+  jpa:
+    show-sql: true
+logging:
+  level:
+    org.hibernate.type: trace

@@ -12,8 +12,8 @@ public class Participant {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "Id")
-  private long Id;
+  @Column(name = "id")
+  private long id;
 
   @Column(name = "name", nullable = false)
   private String name;
@@ -35,11 +35,11 @@ public class Participant {
 
   @Override
   public String toString() {
-    return String.format( "Customer[id=%d, name='%s']", Id, name);
+    return String.format( "Customer[id=%d, name='%s']", id, name);
   }
 
   public Long getId() {
-    return Id;
+    return id;
   }
 
   public String getName() {

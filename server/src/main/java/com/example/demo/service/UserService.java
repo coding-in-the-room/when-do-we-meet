@@ -17,11 +17,12 @@ public class UserService {
     this.userRepository = userRepository;
   }
 
-  public User getUserById(long Id) throws NotFoundException {
-    Optional<User> user = userRepository.findById(Id);
+  public User getUserById(long id) throws NotFoundException {
+    Optional<User> user = userRepository.findById(id);
 
-    if (user.isEmpty()) {
-      throw new NotFoundException("no Id found");
+    System.out.println(user.toString());
+    if(!user.isPresent()){
+      throw new NotFoundException("User Not Found");
     }
 
     return user.get();

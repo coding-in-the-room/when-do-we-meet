@@ -14,8 +14,8 @@ public class Schedule {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "Id", nullable = false, unique = true)
-  private long Id;
+  @Column(name = "id", nullable = false, unique = true)
+  private long id;
 
   @Column(name = "name", nullable = false)
   private String name;
